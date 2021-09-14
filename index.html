@@ -1,0 +1,148 @@
+<!--
+-Imagem ou texto de chamada;                        ✓
+-Campos para preenchimento de nome e e-mail;        ✓
+-Botão para enviar o formulário;                    ✓
+-Opção para que o pop-up não apareça novamente, salvando essa informação em cache; ?
+-Botão de fechar pop-up                             ✓                  
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevJR - Teste</title>
+
+    <link rel="shortcut icon" href="./assets/binary-code.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/popup-style.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <!--------    NAVBAR  --------->
+    <header>
+      <h2 class="logo">Leads</h2>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+
+      <a class="cta" href="https://www.linkedin.com/in/luis-fernando-g-f/"><button>Contato</button></a>
+    </header>
+
+    <!--------    MAIN  --------->
+    <main>
+      <div class="content">
+        <h3>Já ouviu Falar de leads?</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nunc
+          nec nunc vulputate sollicitudin. In faucibus elit a ex egestas, sed
+          posuere neque feugiat. Mauris pretium lacus at egestas mattis. Quisque
+          pharetra est at turpis vehicula egestas. Aenean non facilisis mauris,
+          non tristique ex. Nullam commodo lorem ligula, ut lacinia ex malesuada
+          eget. Sed pulvinar felis at velit gravida, eu convallis ex aliquam.
+          Duis convallis, ipsum nec rutrum suscipit, sapien sapien mattis dolor,
+          iaculis aliquam elit metus sit amet velit. Fusce lacinia, sapien id
+          finibus iaculis, urna elit fermentum erat, a vehicula ex orci posuere
+          magna. Proin venenatis cursus lorem, rhoncus vehicula massa maximus
+          vitae. Ut dapibus varius felis eget efficitur. Fusce non fringilla
+          nibh.
+        </p>
+        <img src="./assets/leads.jpg" alt="" />
+        <p>
+          Phasellus interdum tincidunt ante, quis cursus nunc eleifend sed.
+          Maecenas vulputate at diam a lacinia. Suspendisse vestibulum purus
+          eget accumsan malesuada. Sed lacinia purus nec turpis malesuada
+          tristique. Donec id orci laoreet, placerat augue in, cursus orci. Cras
+          vel purus viverra quam finibus tempor a at nisi. Etiam blandit ante
+          dui, sed blandit enim sodales ut. Phasellus convallis risus enim, et
+          sodales mauris feugiat vel. Praesent vitae porta sapien. Donec id
+          sagittis augue, ac posuere quam. Ut porttitor mauris at nisl
+          efficitur, ac finibus dolor tincidunt. Aliquam nisl elit, placerat id
+          ultricies vel, lobortis non diam. Aliquam pharetra lectus mauris,
+          accumsan euismod augue tincidunt scelerisque. Phasellus nisl arcu,
+          varius a libero tempus, tempor aliquet nisi. Integer metus tortor,
+          egestas eget risus id, euismod dapibus leo.
+        </p>
+        <p>
+          Pellentesque quis arcu pellentesque arcu sodales volutpat at sit amet
+          ipsum. Curabitur auctor felis ut elit ornare, tincidunt volutpat magna
+          sodales. Morbi tellus urna, venenatis tincidunt laoreet ut, ultricies
+          nec erat. Quisque sit amet condimentum leo, eu pellentesque tortor.
+          Vestibulum a dolor libero. Duis facilisis sagittis laoreet. Fusce
+          iaculis iaculis purus, eget vestibulum purus hendrerit nec. Donec
+          sapien felis, venenatis eu dui a, cursus aliquet leo. Duis interdum
+          tincidunt dui vel rhoncus. Phasellus et maximus dolor, ac ullamcorper
+          libero.
+        </p>
+        <p>
+          Vivamus quis eros ornare, imperdiet neque ornare, tincidunt felis.
+          Quisque fermentum lacinia enim, ut commodo ligula ornare quis. Fusce
+          fermentum fermentum justo, facilisis consectetur libero porttitor at.
+          Fusce ultricies fermentum elit, ac interdum est elementum at. Vivamus
+          dui dui, maximus eget nunc at, egestas varius arcu. Nulla elementum
+          finibus accumsan. Duis mi tortor, pellentesque at sapien eget, mattis
+          congue purus. Maecenas at lorem vitae tortor auctor maximus
+          sollicitudin et dui. Phasellus vitae ante quis felis lobortis
+          tincidunt. Sed convallis nibh id ultrices fermentum.
+        </p>
+      </div>
+    </main>
+
+    <!--------  POP-UP  --------->
+    <div class="modal-overlay ">
+      <div class="modal">
+        <div id="form">
+          <a href="#" class="close" onclick="Modal.close()">X</a>
+
+          <h2>Se interessou? Assine nossa Newsletter</h2>
+          <small>Enviaremos novidades sobre leads todos os dias!</small>
+          <form action="">
+            <div class="input-group">
+              <label class="sr-only" for="input-name"> Nome: </label>
+              <input
+                type="text"
+                id="input-name"
+                name="input-name"
+                placeholder="Seu Nome"
+                value=""
+              />
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="input-email"> E-mail: </label>
+              <input
+                type="text"
+                id="input-email"
+                name="input-email"
+                placeholder="Seu E-mail"
+                value=""
+              />
+            </div>
+
+            <div class="input-group actions">
+              <a href="#" class="dontshow">Não mostrar novamente</a>
+              <button id="submit" onclick="Modal.close()">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="reference"><a href="https://www.freepik.com" title="Freepik">Icons made by Freepik</a></div>
+    </footer>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
